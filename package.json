@@ -1,0 +1,20 @@
+{
+  "name": "ts-learning",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "nodemon --watch src/ -e ts --exec ts-node ./src/index.ts",
+    "start": "parcel ./src/index.html"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "nodemon": "^2.0.15",
+    "parcel-bundler": "^1.12.5",
+    "ts-node": "^10.7.0",
+    "typescript": "^4.6.3"
+  }
+}

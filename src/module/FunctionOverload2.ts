@@ -32,7 +32,9 @@ function findMsg(type:MessageType, pageSize:number): Array<Message>
  * @param payload
  * @param pageSize 如果重载签名函数和实现签名函数的参数个数不一致，此时，可以在实现签名函数上给参数加上默认值，可以解决此问题。
  */
-function findMsg(payload:any, pageSize: number = 1): Message | Array<Message> | undefined {
+// 既可以用默认值，也可以用可选参数？
+// function findMsg(payload:any, pageSize: number = 1 ): Message | Array<Message> | undefined {
+function findMsg(payload:any, pageSize?: number): Message | Array<Message> | undefined {
     if(typeof payload === 'number') {
         return messages.find(msg => msg.id === payload)
     } else {

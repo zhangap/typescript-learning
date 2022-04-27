@@ -6,7 +6,8 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "dev": "nodemon --watch src/ -e ts --exec ts-node ./src/index.ts",
-    "start": "parcel ./src/index.html"
+    "start": "parcel ./src/index.html",
+    "start:test": "parcel ./src/index2.html"
   },
   "keywords": [],
   "author": "",

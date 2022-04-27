@@ -15,6 +15,7 @@ class Square {
 
     // 构造器重载签名
     constructor(width:number, height:number)
+    // 构造器重载签名
     constructor(objParams: type_chartParams)
     // 构造器实现签名
     constructor(widthOrObjParams: any, height?:any) {

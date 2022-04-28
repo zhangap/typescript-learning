@@ -4,6 +4,9 @@
  */
 export class Store {
 
+    // 备注：单件设计模式里面有一个饿汉式单件设计模式，也就是在不需要直接去获取实例，在代码加载的时候，就已经new了一个对象实例,如下所示
+    // private static store: Store = new Store();
+
     private static store: Store;
     // public static  id: string = Date.now() + '@' + Math.random()
 

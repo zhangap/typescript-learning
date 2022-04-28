@@ -1,18 +1,15 @@
-import {Store} from "./Store";
+import {getUser} from "./TestStore2";
+import {addUser} from "./TestStore1";
 
-const store = Store.getInstance();
 
-const user = {
-    id: '001',
-    name: 'zap',
-    age: 32
-};
+addUser();
 
-// 设置值
-store.setItem('loginUser',user);
+// 第一次获取
+console.log(getUser())
 
-console.log(store.getItem('loginUser'));
-
-const store2 = Store.getInstance()
-console.log(store.getItem('loginUser'));
-
+// 间隔10秒后再获取
+setTimeout(() => {
+    // { id: '001', name: 'tengri', age: 100 }
+    // 这个例子已经说明，TestStore1和TestStore2获取的对象实例实际上市同一个
+    console.log(getUser())
+}, 10000)

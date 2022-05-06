@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>测试</title>
+</head>
+<body>
+
+</body>
+</html>
+<script>
+    function People(name,age) {
+        this.name = name;
+        this.age = age;
+    }
+    People.staticProp = 'staticProp';
+    People.staticMethod = function() {
+        console.log('这个是静态方法....');
+    }
+    People.prototype.sayHello = function() {
+        return `${this.name}-${this.age}`;
+    }
+
+    let p = new People('张三丰',100);
+    console.log(p);
+    for (let key in People) {
+        console.log('key:', key);
+    }
+</script>
